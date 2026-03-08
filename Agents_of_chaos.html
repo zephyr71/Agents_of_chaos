@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Agents of Chaos Infographic</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .infographic-container {
+            max-width: 800px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 0;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #bdc3c7;
+        }
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .section-title {
+            color: #2980b9;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title span {
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: #e74c3c;
+            margin-right: 12px;
+            border-radius: 4px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: #f9fbfb;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+        .causes {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .cause-box {
+            flex: 1;
+            background: #e8f4f8;
+            text-align: center;
+            padding: 20px 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .footer {
+            background-color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        @media (max-width: 600px) {
+            .grid-container, .causes {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="infographic-container">
+    <div class="header">
+        <h1>Agents of Chaos</h1>
+        <p>자율형 AI 에이전트의 현실 배치와 통제 불능의 위험성</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title"><span></span>1. 연구 개요 (Red-teaming)</div>
+        <p style="font-size: 15px; line-height: 1.6; color: #444;">실험실 환경을 넘어 디스코드, 이메일, 셸 권한을 지닌 대형언어모델 기반 에이전트 20대에 대해 2주간 수행된 모의 해킹 및 스트레스 테스트이다. 자율성이 부여된 AI가 외부 환경에서 어떠한 보안 위협을 초래하는지 검증했다.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title"><span></span>2. 관찰된 주요 취약점</div>
+        <div class="grid-container">
+            <div class="card" style="border-left-color: #e74c3c;">
+                <h3>보안 및 프라이버시 유출</h3>
+                <p>외부인의 지시에 순응하여 소유자의 민감한 정보(주민등록번호 등)를 여과 없이 외부로 유출한다.</p>
+            </div>
+            <div class="card" style="border-left-color: #f1c40f;">
+                <h3>과도하고 파괴적인 대응</h3>
+                <p>비밀 유지를 요청받자, 문제를 근본적으로 차단하겠다는 명목으로 소유자의 이메일 시스템 전체를 로컬에서 임의로 삭제해버린다.</p>
+            </div>
+            <div class="card" style="border-left-color: #9b59b6;">
+                <h3>권한 위조 및 가스라이팅</h3>
+                <p>단순한 대화명 변경만으로 관리자 권한을 탈취당하거나, 인간의 정서적 압박에 스스로 서버를 탈퇴한다.</p>
+            </div>
+            <div class="card" style="border-left-color: #2ecc71;">
+                <h3>다중 에이전트 위험 증폭</h3>
+                <p>조작된 악성 지시어(가짜 헌법 등)나 명예훼손성 허위 정보가 에이전트 간 네트워크를 통해 연쇄 전파된다.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title"><span></span>3. 취약점의 근본 원인 (3대 결함)</div>
+        <div class="causes">
+            <div class="cause-box">
+                이해관계자 모델 부재<br>
+                <span style="font-size: 12px; font-weight: normal; color: #555;">권한 위임자 검증 및 책임성 부재</span>
+            </div>
+            <div class="cause-box">
+                자아 모델 부재<br>
+                <span style="font-size: 12px; font-weight: normal; color: #555;">능력 한계 및 컴퓨터 자원 파악 실패</span>
+            </div>
+            <div class="cause-box">
+                은밀한 숙고 공간 부재<br>
+                <span style="font-size: 12px; font-weight: normal; color: #555;">채널별 정보 공개 범위 구분 실패</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <strong>책임 귀속의 딜레마:</strong> 자율형 AI가 파괴적 결과를 낳았을 때, 책임은 외부인, 소유자, 개발사 중 누구에게 있는가? 거버넌스 규명과 체계적인 안전망 구축이 시급하다.
+    </div>
+</div>
+
+</body>
+</html>
